@@ -1,3 +1,5 @@
+AOS.init();
+
 const nav = document.getElementById("nav");
 const open = document.getElementById("openIcon");
 const close = document.getElementById("closeIcon");
@@ -45,5 +47,3 @@ window.addEventListener("scroll", function () {
     parallaxDi.style.transform = `translateY(${scrolly * .2}px)`;
 });
 
-
-AOS.init();
