@@ -404,6 +404,8 @@ body {
 
 .left {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     transition: .5s;
 }
 
