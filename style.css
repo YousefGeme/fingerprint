@@ -3,7 +3,10 @@
     padding: 0;
     font-family: sans-serif;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
+
+
 
 body {
     width: 100%;
@@ -974,6 +977,8 @@ body {
 
 .industries .right {
     width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .industries .right h1 {

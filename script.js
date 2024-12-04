@@ -1,5 +1,25 @@
-AOS.init();
+// counter
+let container = document.querySelector(".container");
+let counter = document.querySelectorAll(".card-foot .counter");
+let start = false;
+window.onscroll = function () {
+    if (window.scrollY >= container.offsetTop) {
+        if (!start) {
+            counter.forEach((num) => startCount(num));
+        }
+        start = true
+    }
+};
 
+function startCount(el) {
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+        el.textContent++;
+        if (el.textContent == goal) {
+            clearInterval(count);
+        }
+    }, 3000 / goal);
+}
 const nav = document.getElementById("nav");
 const open = document.getElementById("openIcon");
 const close = document.getElementById("closeIcon");
@@ -77,26 +97,3 @@ var swiper = new Swiper(".mmySwiper", {
         }
     }
 });
-
-// counter
-let container = document.querySelector(".container");
-let counter = document.querySelectorAll(".card-foot .counter");
-let start = false;
-window.onscroll = function () {
-    if (window.scrollY >= container.offsetTop) {
-        if (!start) {
-            counter.forEach((num) => startCount(num));
-        }
-        start = true
-    }
-};
-
-function startCount(el) {
-    let goal = el.dataset.goal;
-    let count = setInterval(() => {
-        el.textContent++;
-        if (el.textContent == goal) {
-            clearInterval(count);
-        }
-    }, 3000 / goal);
-}
